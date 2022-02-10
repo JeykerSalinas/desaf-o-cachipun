@@ -1,9 +1,10 @@
-// const myChances = Number(prompt("Cuántas veces vamos a jugar?"))
-const myChances = 3;
+const myChances = Number(prompt("Cuántas veces vamos a jugar?"))
 const plays = ["piedra", "papel", "tijera"];
 const pc = () => plays[Math.floor(Math.random() * 3)];
 let myCountdown = 0
 let pcCountdown = 0
+
+
 
 for (let i = myChances; i > 0; i--) {
 let myPlay = prompt("Piedra, papel o tijera?").toLocaleLowerCase();
@@ -39,6 +40,10 @@ console.log("Tu jugaste ",myPlay)
       console.log("Perdiste¡¡");
       myCountdown++
     } 
+    else{ 
+      pcCountdown ++
+      alert("Jugada nó válida")
+  }
 }
 
 if(myCountdown>pcCountdown){ console.log(`Resultado: ${myCountdown} - ${pcCountdown}. Felicidades, ganaste el partido`)}
